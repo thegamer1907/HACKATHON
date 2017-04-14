@@ -1,0 +1,193 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1" x="286" y="102">
+    <mutation component_type="Clock" instance_name="Clock1" event_name="Timer"></mutation>
+    <field name="COMPONENT_SELECTOR">Clock1</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="2" inline="false">
+        <field name="VAR">global name</field>
+        <value name="VALUE">
+          <block type="controls_getStartValue" id="3"></block>
+        </value>
+        <next>
+          <block type="component_set_get" id="4" inline="false">
+            <mutation component_type="Clock" set_or_get="set" property_name="TimerEnabled" is_generic="false" instance_name="Clock1"></mutation>
+            <field name="COMPONENT_SELECTOR">Clock1</field>
+            <field name="PROP">TimerEnabled</field>
+            <value name="VALUE">
+              <block type="logic_false" id="5">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="6" inline="false">
+                <mutation elseif="5" else="1"></mutation>
+                <value name="IF0">
+                  <block type="text_compare" id="7" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="8">
+                        <field name="VAR">global name</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="9">
+                        <field name="TEXT">come</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_openAnotherScreen" id="10" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="11">
+                        <field name="TEXT">openaccl1</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="text_compare" id="12" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="13">
+                        <field name="VAR">global name</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="14">
+                        <field name="TEXT">come1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="controls_openAnotherScreen" id="15" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="16">
+                        <field name="TEXT">cheque_test</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF2">
+                  <block type="text_compare" id="27" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="28">
+                        <field name="VAR">global name</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="29">
+                        <field name="TEXT">come2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="controls_openAnotherScreen" id="30" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="31">
+                        <field name="TEXT">atm</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF3">
+                  <block type="text_compare" id="39" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="40">
+                        <field name="VAR">global name</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="41">
+                        <field name="TEXT">come3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO3">
+                  <block type="controls_openAnotherScreen" id="42" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="43">
+                        <field name="TEXT">budget</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF4">
+                  <block type="text_compare" id="52" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="53">
+                        <field name="VAR">global name</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="54">
+                        <field name="TEXT">come4</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO4">
+                  <block type="controls_openAnotherScreen" id="55" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="56">
+                        <field name="TEXT">withdraw</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <value name="IF5">
+                  <block type="text_compare" id="66" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="67">
+                        <field name="VAR">global name</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="68">
+                        <field name="TEXT">come5</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO5">
+                  <block type="controls_openAnotherScreen" id="69" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="70">
+                        <field name="TEXT">stock</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="controls_openAnotherScreen" id="17" inline="false">
+                    <value name="SCREEN">
+                      <block type="text" id="18">
+                        <field name="TEXT">login</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="19" inline="false" x="884" y="127">
+    <field name="NAME">name</field>
+    <value name="VALUE">
+      <block type="text" id="20">
+        <field name="TEXT">0</field>
+      </block>
+    </value>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

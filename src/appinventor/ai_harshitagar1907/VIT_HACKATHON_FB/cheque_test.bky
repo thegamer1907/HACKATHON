@@ -1,0 +1,957 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="1" x="-296" y="-115">
+    <mutation component_type="Form" instance_name="cheque_test" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">cheque_test</field>
+    <statement name="DO">
+      <block type="component_set_get" id="2" inline="false">
+        <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q1"></mutation>
+        <field name="COMPONENT_SELECTOR">q1</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="3">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="4" inline="false">
+            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q2"></mutation>
+            <field name="COMPONENT_SELECTOR">q2</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE">
+              <block type="logic_boolean" id="5">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="6" inline="false">
+                <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q3"></mutation>
+                <field name="COMPONENT_SELECTOR">q3</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="7">
+                    <field name="BOOL">FALSE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="8" inline="false">
+                    <mutation component_type="Spinner" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Spinner1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Spinner1</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="9">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="10" inline="false">
+                        <mutation component_type="Spinner" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Spinner2"></mutation>
+                        <field name="COMPONENT_SELECTOR">Spinner2</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="11">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="12" inline="false">
+                            <mutation component_type="Spinner" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Spinner3"></mutation>
+                            <field name="COMPONENT_SELECTOR">Spinner3</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="13">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="14" inline="false" x="58" y="-133">
+    <field name="NAME">attempt</field>
+    <value name="VALUE">
+      <block type="math_number" id="15">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="16" inline="false" x="78" y="-93">
+    <field name="NAME">score</field>
+    <value name="VALUE">
+      <block type="math_number" id="17">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="300" x="-788" y="-27">
+    <mutation component_type="Form" instance_name="cheque_test" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">cheque_test</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="301" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="302">
+            <field name="TEXT">Basics</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="18" x="-1110" y="66">
+    <mutation component_type="Spinner" instance_name="Spinner2" event_name="AfterSelecting"></mutation>
+    <field name="COMPONENT_SELECTOR">Spinner2</field>
+    <statement name="DO">
+      <block type="component_set_get" id="19" inline="false">
+        <mutation component_type="Spinner" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Spinner2"></mutation>
+        <field name="COMPONENT_SELECTOR">Spinner2</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="20">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="21" inline="false">
+            <field name="VAR">global attempt</field>
+            <value name="VALUE">
+              <block type="math_add" id="22" inline="true">
+                <mutation items="2"></mutation>
+                <value name="NUM0">
+                  <block type="lexical_variable_get" id="23">
+                    <field name="VAR">global attempt</field>
+                  </block>
+                </value>
+                <value name="NUM1">
+                  <block type="math_number" id="24">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="25" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="text_compare" id="26" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="27">
+                        <mutation>
+                          <eventparam name="selection"></eventparam>
+                        </mutation>
+                        <field name="VAR">selection</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="28">
+                        <field name="TEXT">DD/MM/YY</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_set_get" id="29" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="FontSize" is_generic="false" instance_name="q2"></mutation>
+                    <field name="COMPONENT_SELECTOR">q2</field>
+                    <field name="PROP">FontSize</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="30">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="31" inline="false">
+                        <mutation component_type="Label" set_or_get="set" property_name="TextColor" is_generic="false" instance_name="q2"></mutation>
+                        <field name="COMPONENT_SELECTOR">q2</field>
+                        <field name="PROP">TextColor</field>
+                        <value name="VALUE">
+                          <block type="color_green" id="32">
+                            <field name="COLOR">#00ff00</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="33" inline="false">
+                            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q2"></mutation>
+                            <field name="COMPONENT_SELECTOR">q2</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="34">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="35" inline="false">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="q2"></mutation>
+                                <field name="COMPONENT_SELECTOR">q2</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="36">
+                                    <field name="TEXT">Correct!!</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="lexical_variable_set" id="37" inline="false">
+                                    <field name="VAR">global score</field>
+                                    <value name="VALUE">
+                                      <block type="math_add" id="38" inline="true">
+                                        <mutation items="2"></mutation>
+                                        <value name="NUM0">
+                                          <block type="lexical_variable_get" id="39">
+                                            <field name="VAR">global score</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM1">
+                                          <block type="math_number" id="40">
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_set_get" id="41" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="FontSize" is_generic="false" instance_name="q2"></mutation>
+                    <field name="COMPONENT_SELECTOR">q2</field>
+                    <field name="PROP">FontSize</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="42">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="43" inline="false">
+                        <mutation component_type="Label" set_or_get="set" property_name="TextColor" is_generic="false" instance_name="q2"></mutation>
+                        <field name="COMPONENT_SELECTOR">q2</field>
+                        <field name="PROP">TextColor</field>
+                        <value name="VALUE">
+                          <block type="color_green" id="44">
+                            <field name="COLOR">#ff0000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="45" inline="false">
+                            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q2"></mutation>
+                            <field name="COMPONENT_SELECTOR">q2</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="46">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="47" inline="false">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="q2"></mutation>
+                                <field name="COMPONENT_SELECTOR">q2</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="48">
+                                    <field name="TEXT">Wrong!!</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="49" inline="false">
+                    <value name="IF0">
+                      <block type="math_compare" id="50" inline="true">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="lexical_variable_get" id="51">
+                            <field name="VAR">global attempt</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="52">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_method" id="53" inline="false">
+                        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="54" inline="false">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="55">
+                                <field name="TEXT">You have answered </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="lexical_variable_get" id="56">
+                                <field name="VAR">global score</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="57">
+                                <field name="TEXT"> out of 3 questions correctly. Do you want to retake the test?</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="58">
+                            <field name="TEXT">Congratulations!!</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="59">
+                            <field name="TEXT">Yes</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block type="text" id="60">
+                            <field name="TEXT">No</field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block type="logic_boolean" id="61">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="component_set_get" id="189" inline="false">
+                        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="vq3"></mutation>
+                        <field name="COMPONENT_SELECTOR">vq3</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="190">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="62" x="417" y="51">
+    <mutation component_type="Spinner" instance_name="Spinner3" event_name="AfterSelecting"></mutation>
+    <field name="COMPONENT_SELECTOR">Spinner3</field>
+    <statement name="DO">
+      <block type="component_set_get" id="63" inline="false">
+        <mutation component_type="Spinner" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Spinner3"></mutation>
+        <field name="COMPONENT_SELECTOR">Spinner3</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="64">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="65" inline="false">
+            <field name="VAR">global attempt</field>
+            <value name="VALUE">
+              <block type="math_add" id="66" inline="true">
+                <mutation items="2"></mutation>
+                <value name="NUM0">
+                  <block type="lexical_variable_get" id="67">
+                    <field name="VAR">global attempt</field>
+                  </block>
+                </value>
+                <value name="NUM1">
+                  <block type="math_number" id="68">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="69" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="text_compare" id="70" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="71">
+                        <mutation>
+                          <eventparam name="selection"></eventparam>
+                        </mutation>
+                        <field name="VAR">selection</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="72">
+                        <field name="TEXT">Cheque Number &amp; MICR code</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_set_get" id="73" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="FontSize" is_generic="false" instance_name="q3"></mutation>
+                    <field name="COMPONENT_SELECTOR">q3</field>
+                    <field name="PROP">FontSize</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="74">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="75" inline="false">
+                        <mutation component_type="Label" set_or_get="set" property_name="TextColor" is_generic="false" instance_name="q3"></mutation>
+                        <field name="COMPONENT_SELECTOR">q3</field>
+                        <field name="PROP">TextColor</field>
+                        <value name="VALUE">
+                          <block type="color_green" id="76">
+                            <field name="COLOR">#00ff00</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="77" inline="false">
+                            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q3"></mutation>
+                            <field name="COMPONENT_SELECTOR">q3</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="78">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="79" inline="false">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="q3"></mutation>
+                                <field name="COMPONENT_SELECTOR">q3</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="80">
+                                    <field name="TEXT">Correct!!</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="lexical_variable_set" id="81" inline="false">
+                                    <field name="VAR">global score</field>
+                                    <value name="VALUE">
+                                      <block type="math_add" id="82" inline="true">
+                                        <mutation items="2"></mutation>
+                                        <value name="NUM0">
+                                          <block type="lexical_variable_get" id="83">
+                                            <field name="VAR">global score</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM1">
+                                          <block type="math_number" id="84">
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_set_get" id="85" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="FontSize" is_generic="false" instance_name="q3"></mutation>
+                    <field name="COMPONENT_SELECTOR">q3</field>
+                    <field name="PROP">FontSize</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="86">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="87" inline="false">
+                        <mutation component_type="Label" set_or_get="set" property_name="TextColor" is_generic="false" instance_name="q3"></mutation>
+                        <field name="COMPONENT_SELECTOR">q3</field>
+                        <field name="PROP">TextColor</field>
+                        <value name="VALUE">
+                          <block type="color_green" id="88">
+                            <field name="COLOR">#ff0000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="89" inline="false">
+                            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q3"></mutation>
+                            <field name="COMPONENT_SELECTOR">q3</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="90">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="91" inline="false">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="q3"></mutation>
+                                <field name="COMPONENT_SELECTOR">q3</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="92">
+                                    <field name="TEXT">Wrong!!</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="93" inline="false">
+                    <value name="IF0">
+                      <block type="math_compare" id="94" inline="true">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="lexical_variable_get" id="95">
+                            <field name="VAR">global attempt</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="96">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_method" id="97" inline="false">
+                        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="98" inline="false">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="99">
+                                <field name="TEXT">You have answered </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="lexical_variable_get" id="100">
+                                <field name="VAR">global score</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="101">
+                                <field name="TEXT"> out of 3 questions correctly. Do you want to retake the test?</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="102">
+                            <field name="TEXT">Congratulations!!</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="103">
+                            <field name="TEXT">Yes</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block type="text" id="104">
+                            <field name="TEXT">No</field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block type="logic_boolean" id="105">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="106" x="-287" y="128">
+    <mutation component_type="Spinner" instance_name="Spinner1" event_name="AfterSelecting"></mutation>
+    <field name="COMPONENT_SELECTOR">Spinner1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="107" inline="false">
+        <mutation component_type="Spinner" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Spinner1"></mutation>
+        <field name="COMPONENT_SELECTOR">Spinner1</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="108">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="lexical_variable_set" id="109" inline="false">
+            <field name="VAR">global attempt</field>
+            <value name="VALUE">
+              <block type="math_add" id="110" inline="true">
+                <mutation items="2"></mutation>
+                <value name="NUM0">
+                  <block type="lexical_variable_get" id="111">
+                    <field name="VAR">global attempt</field>
+                  </block>
+                </value>
+                <value name="NUM1">
+                  <block type="math_number" id="112">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="113" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="text_compare" id="114" inline="true">
+                    <field name="OP">EQUAL</field>
+                    <value name="TEXT1">
+                      <block type="lexical_variable_get" id="115">
+                        <mutation>
+                          <eventparam name="selection"></eventparam>
+                        </mutation>
+                        <field name="VAR">selection</field>
+                      </block>
+                    </value>
+                    <value name="TEXT2">
+                      <block type="text" id="116">
+                        <field name="TEXT">Five thousand Two Rupees Only</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_set_get" id="117" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="FontSize" is_generic="false" instance_name="q1"></mutation>
+                    <field name="COMPONENT_SELECTOR">q1</field>
+                    <field name="PROP">FontSize</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="118">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="119" inline="false">
+                        <mutation component_type="Label" set_or_get="set" property_name="TextColor" is_generic="false" instance_name="q1"></mutation>
+                        <field name="COMPONENT_SELECTOR">q1</field>
+                        <field name="PROP">TextColor</field>
+                        <value name="VALUE">
+                          <block type="color_green" id="120">
+                            <field name="COLOR">#00ff00</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="121" inline="false">
+                            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q1"></mutation>
+                            <field name="COMPONENT_SELECTOR">q1</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="122">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="123" inline="false">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="q1"></mutation>
+                                <field name="COMPONENT_SELECTOR">q1</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="124">
+                                    <field name="TEXT">Correct!!</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="lexical_variable_set" id="125" inline="false">
+                                    <field name="VAR">global score</field>
+                                    <value name="VALUE">
+                                      <block type="math_add" id="126" inline="true">
+                                        <mutation items="2"></mutation>
+                                        <value name="NUM0">
+                                          <block type="lexical_variable_get" id="127">
+                                            <field name="VAR">global score</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM1">
+                                          <block type="math_number" id="128">
+                                            <field name="NUM">1</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_set_get" id="129" inline="false">
+                    <mutation component_type="Label" set_or_get="set" property_name="FontSize" is_generic="false" instance_name="q1"></mutation>
+                    <field name="COMPONENT_SELECTOR">q1</field>
+                    <field name="PROP">FontSize</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="130">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="131" inline="false">
+                        <mutation component_type="Label" set_or_get="set" property_name="TextColor" is_generic="false" instance_name="q1"></mutation>
+                        <field name="COMPONENT_SELECTOR">q1</field>
+                        <field name="PROP">TextColor</field>
+                        <value name="VALUE">
+                          <block type="color_green" id="132">
+                            <field name="COLOR">#ff0000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="133" inline="false">
+                            <mutation component_type="Label" set_or_get="set" property_name="Visible" is_generic="false" instance_name="q1"></mutation>
+                            <field name="COMPONENT_SELECTOR">q1</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="134">
+                                <field name="BOOL">TRUE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="135" inline="false">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="q1"></mutation>
+                                <field name="COMPONENT_SELECTOR">q1</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="136">
+                                    <field name="TEXT">Wrong!!</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="137" inline="false">
+                    <value name="IF0">
+                      <block type="math_compare" id="138" inline="true">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="lexical_variable_get" id="139">
+                            <field name="VAR">global attempt</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="140">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_method" id="141" inline="false">
+                        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text_join" id="142" inline="false">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="143">
+                                <field name="TEXT">You have answered </field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="lexical_variable_get" id="144">
+                                <field name="VAR">global score</field>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="text" id="145">
+                                <field name="TEXT"> out of 3 questions correctly. Do you want to retake the test?</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="146">
+                            <field name="TEXT">Congratulations!!</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block type="text" id="147">
+                            <field name="TEXT">Yes</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block type="text" id="148">
+                            <field name="TEXT">No</field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block type="logic_boolean" id="149">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="component_set_get" id="187" inline="false">
+                        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="vq2"></mutation>
+                        <field name="COMPONENT_SELECTOR">vq2</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="188">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="150" x="1172" y="121">
+    <mutation component_type="Notifier" instance_name="Notifier1" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier1</field>
+    <statement name="DO">
+      <block type="controls_if" id="151" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="text_compare" id="152" inline="true">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="lexical_variable_get" id="153">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="154">
+                <field name="TEXT">Yes</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreenWithStartValue" id="155" inline="false">
+            <value name="SCREENNAME">
+              <block type="text" id="156">
+                <field name="TEXT">Screen1</field>
+              </block>
+            </value>
+            <value name="STARTVALUE">
+              <block type="text" id="157">
+                <field name="TEXT">come1</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_openAnotherScreenWithStartValue" id="158" inline="false">
+            <value name="SCREENNAME">
+              <block type="text" id="159">
+                <field name="TEXT">Basic</field>
+              </block>
+            </value>
+            <value name="STARTVALUE">
+              <block type="controls_getStartValue" id="160"></block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="161" x="324" y="791">
+    <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="162" inline="false">
+        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="test"></mutation>
+        <field name="COMPONENT_SELECTOR">test</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="163">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="164" inline="false">
+            <mutation component_type="Spinner" set_or_get="set" property_name="ElementsFromString" is_generic="false" instance_name="Spinner1"></mutation>
+            <field name="COMPONENT_SELECTOR">Spinner1</field>
+            <field name="PROP">ElementsFromString</field>
+            <value name="VALUE">
+              <block type="text" id="165">
+                <field name="TEXT">--Choice--,Five Thousand Two Only, Five Thousand Two Rupees, Five thousand Two Rupees Only, None Of the Above.</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="166" inline="false">
+                <mutation component_type="Spinner" set_or_get="set" property_name="ElementsFromString" is_generic="false" instance_name="Spinner2"></mutation>
+                <field name="COMPONENT_SELECTOR">Spinner2</field>
+                <field name="PROP">ElementsFromString</field>
+                <value name="VALUE">
+                  <block type="text" id="167">
+                    <field name="TEXT">--Choice--,DD.MM.YY, MM/DD/YY, MM/DD/YYYY, DD/MM/YY</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="168" inline="false">
+                    <mutation component_type="Spinner" set_or_get="set" property_name="ElementsFromString" is_generic="false" instance_name="Spinner3"></mutation>
+                    <field name="COMPONENT_SELECTOR">Spinner3</field>
+                    <field name="PROP">ElementsFromString</field>
+                    <value name="VALUE">
+                      <block type="text" id="169">
+                        <field name="TEXT">--Choice--,IFSC Code &amp; Cheque Number, Account Number &amp; Cheque Number, MICR  code &amp; IFSC Code, Cheque Number &amp; MICR code</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

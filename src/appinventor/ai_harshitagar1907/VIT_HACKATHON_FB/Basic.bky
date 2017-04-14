@@ -1,0 +1,264 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="98" x="1942" y="-167">
+    <mutation component_type="Form" instance_name="Basic" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Basic</field>
+    <statement name="DO">
+      <block type="component_set_get" id="2" inline="false">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label7"></mutation>
+        <field name="COMPONENT_SELECTOR">Label7</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text_join" id="3" inline="false">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="text" id="4">
+                <field name="TEXT">Welcome, </field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="5" inline="false">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="6">
+                    <field name="TEXT">name</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="7">
+                    <field name="TEXT">Blah!</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="text" id="8">
+                <field name="TEXT">!!</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="9" x="176" y="139">
+    <mutation component_type="Form" instance_name="Basic" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">Basic</field>
+    <statement name="DO">
+      <block type="controls_closeApplication" id="10"></block>
+    </statement>
+  </block>
+  <block type="component_event" id="11" x="1222" y="92">
+    <mutation component_type="Button" instance_name="cheque" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">cheque</field>
+    <statement name="DO">
+      <block type="component_method" id="12" inline="false">
+        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="chequenot"></mutation>
+        <field name="COMPONENT_SELECTOR">chequenot</field>
+        <value name="ARG0">
+          <block type="text" id="13">
+            <field name="TEXT">Now Lets See The Demonstration Video </field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="14" inline="false">
+            <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="youtube"></mutation>
+            <field name="COMPONENT_SELECTOR">youtube</field>
+            <field name="PROP">Action</field>
+            <value name="VALUE">
+              <block type="text" id="15">
+                <field name="TEXT">android.intent.action.VIEW</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="16" inline="false">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="youtube"></mutation>
+                <field name="COMPONENT_SELECTOR">youtube</field>
+                <field name="PROP">DataUri</field>
+                <value name="VALUE">
+                  <block type="text" id="17">
+                    <field name="TEXT">https://www.youtube.com/watch?v=CgEu5EAvZYY</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="18">
+                    <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="youtube"></mutation>
+                    <field name="COMPONENT_SELECTOR">youtube</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="19" x="248" y="227">
+    <mutation component_type="Button" instance_name="budget" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">budget</field>
+    <statement name="DO">
+      <block type="component_method" id="20" inline="false">
+        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="21">
+            <field name="TEXT">Please ensure that you have completed the other courses before proceeding.</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="22">
+            <field name="TEXT">Advice..</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="23">
+            <field name="TEXT">OK</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="24" x="1198" y="286">
+    <mutation component_type="ActivityStarter" instance_name="youtube" event_name="ActivityCanceled"></mutation>
+    <field name="COMPONENT_SELECTOR">youtube</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="25" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="26">
+            <field name="TEXT">cheque_test</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="128" x="1778" y="256">
+    <mutation component_type="Button" instance_name="market" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">market</field>
+    <statement name="DO">
+      <block type="component_method" id="129" inline="false">
+        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="chequenot"></mutation>
+        <field name="COMPONENT_SELECTOR">chequenot</field>
+        <value name="ARG0">
+          <block type="text" id="130">
+            <field name="TEXT">Now Lets See The Demonstration Video </field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="131" inline="false">
+            <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="stock"></mutation>
+            <field name="COMPONENT_SELECTOR">stock</field>
+            <field name="PROP">Action</field>
+            <value name="VALUE">
+              <block type="text" id="132">
+                <field name="TEXT">android.intent.action.VIEW</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="133" inline="false">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="stock"></mutation>
+                <field name="COMPONENT_SELECTOR">stock</field>
+                <field name="PROP">DataUri</field>
+                <value name="VALUE">
+                  <block type="text" id="134">
+                    <field name="TEXT">https://www.youtube.com/watch?v=aZbHR2_K55g&amp;list=PLD61_OYvqmdp73ovZK5UI_w6ojx37GICf</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="135">
+                    <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="stock"></mutation>
+                    <field name="COMPONENT_SELECTOR">stock</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="27" x="314" y="391">
+    <mutation component_type="Button" instance_name="openacc" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">openacc</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="28" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="29">
+            <field name="TEXT">openaccl1</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="117" x="1162" y="364">
+    <mutation component_type="Button" instance_name="atm" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">atm</field>
+    <statement name="DO">
+      <block type="component_method" id="118" inline="false">
+        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="chequenot"></mutation>
+        <field name="COMPONENT_SELECTOR">chequenot</field>
+        <value name="ARG0">
+          <block type="text" id="119">
+            <field name="TEXT">Now Lets See The Demonstration Video </field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="120" inline="false">
+            <mutation component_type="ActivityStarter" set_or_get="set" property_name="Action" is_generic="false" instance_name="you1"></mutation>
+            <field name="COMPONENT_SELECTOR">you1</field>
+            <field name="PROP">Action</field>
+            <value name="VALUE">
+              <block type="text" id="121">
+                <field name="TEXT">android.intent.action.VIEW</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="122" inline="false">
+                <mutation component_type="ActivityStarter" set_or_get="set" property_name="DataUri" is_generic="false" instance_name="you1"></mutation>
+                <field name="COMPONENT_SELECTOR">you1</field>
+                <field name="PROP">DataUri</field>
+                <value name="VALUE">
+                  <block type="text" id="123">
+                    <field name="TEXT">https://youtu.be/ZUzeOYLfNzA?t=15</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="124">
+                    <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="you1"></mutation>
+                    <field name="COMPONENT_SELECTOR">you1</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="136" x="1765" y="455">
+    <mutation component_type="ActivityStarter" instance_name="stock" event_name="ActivityCanceled"></mutation>
+    <field name="COMPONENT_SELECTOR">stock</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="137" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="138">
+            <field name="TEXT">stock</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="125" x="1167" y="558">
+    <mutation component_type="ActivityStarter" instance_name="you1" event_name="ActivityCanceled"></mutation>
+    <field name="COMPONENT_SELECTOR">you1</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="126" inline="false">
+        <value name="SCREEN">
+          <block type="text" id="127">
+            <field name="TEXT">atm</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>
