@@ -1,4 +1,4 @@
 # HACKATHON
 VIT HACKATHON 
 
-Please open FinAdvisor.apk
+Please open FinAdvisor_Final.apk
